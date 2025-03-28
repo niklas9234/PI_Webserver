@@ -51,10 +51,10 @@ Die wichtigsten Ordner und Dateien im Projekt sind:
    - PostgreSQL (ab Version 14) Docker-Image herunterladen 
    ``docker pull postgres:14.*`` 
    - ``docker-compose.yaml`` ausführen
-3. **Requirements**
+3. **VEnv & Requirements**
     ```bash
+   python -m venv venv
    pip install -r requirements.txt
-4. ****
 
 ### Nutzung der Anwendung 
 - **Dashboard:**
