@@ -5,37 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95fd0231-bdb0-433c-9a13-a0cfc69eb34c" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/auth/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/auth/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/blog/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/blog/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/blog/routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/persistancelayer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/static/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/templates/blog/explore.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/templates/blog/my_posts.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webserver/webinterface/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webserver/database/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/database/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/database/models/posting.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/database/models/posting.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/database/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/database/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/error_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/routes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/auth/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/routes/auth.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/routes/blog.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/routes/example_blueprint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/routes/users.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/static/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/templates/auth/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/templates/auth/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/templates/auth/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/templates/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/templates/blog/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/webinterface.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/webinterface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/logging_config.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/webinterface/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/auth/routes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/webinterface/persistancelayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/persistancelayer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webserver/webinterface/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +30,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;niklas9234&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/niklas9234/PI_Webserver.git&quot;,
+    &quot;accountId&quot;: &quot;23964c79-93e0-49d1-b17c-1f290b34c332&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -62,25 +51,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "Python.main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Software/projekt_informatik/PI_webserver/webserver/main.py"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Software/projekt_informatik/PI_webserver/webserver/main.py&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Software\projekt_informatik\PI_webserver" />
       <recent name="C:\Software\projekt_informatik\PI_webserver\webserver\webinterface\templates\auth" />
       <recent name="C:\Software\projekt_informatik\PI_webserver\webserver\webinterface\auth" />
       <recent name="C:\Software\projekt_informatik\PI_webserver\webserver\webinterface" />
       <recent name="C:\Software\projekt_informatik\PI_webserver\webserver\webinterface\routes\blog" />
-      <recent name="C:\Software\projekt_informatik\PI_webserver" />
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
@@ -98,7 +87,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/webserver/main.py" />
+      <option name="SCRIPT_NAME" value="C:\Software\projekt_informatik\PI_webserver\main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -108,7 +97,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -149,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742374142051</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1743176646003</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743176646003</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">

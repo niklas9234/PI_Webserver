@@ -7,16 +7,9 @@ from sqlalchemy import select
 
 from webserver.database.models.posting import Posting
 from webserver.database.models.user import User
-from webserver.webinterface import webinterface
 from webserver.webinterface.auth import auth_bp
 from webserver.webinterface.auth.forms import LoginForm, RegistrationForm
 from webserver.webinterface.persistancelayer import PersistenceLayer
-
-"""@auth_bp.route('/')
-@auth_bp.route('/index')
-def index():
-    return render_template('auth/login.html')"""
-
 
 
 @auth_bp.route('/dashboard', methods=['GET', 'POST'])

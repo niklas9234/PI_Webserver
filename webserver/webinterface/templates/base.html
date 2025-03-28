@@ -7,7 +7,6 @@
 </head>
 <body>
 
-  <!-- Navigation / Header -->
   <header class="navbar">
     <div class="navbar-left">
       <h1>Webserver</h1>
@@ -19,7 +18,6 @@
       <a href="{{ url_for('blog.create') }}">Create</a>
     </nav>
     <div class="navbar-right">
-      <!-- Wenn Admin, dann Accounts anzeigen -->
       {% if session.get('role') == 'admin' %}
       <a href="{{ url_for('accounts') }}">Accounts</a>
       {% endif %}

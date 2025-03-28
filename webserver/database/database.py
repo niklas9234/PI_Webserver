@@ -1,9 +1,8 @@
 import contextlib
 import logging
 
-from decorator import contextmanager
 from sqlalchemy import create_engine, inspect
-from sqlalchemy.orm import sessionmaker, scoped_session, Session
+from sqlalchemy.orm import sessionmaker, Session
 from sqlalchemy_utils import database_exists, create_database
 
 from webserver.database.base import Base

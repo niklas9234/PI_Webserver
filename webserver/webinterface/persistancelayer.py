@@ -1,7 +1,5 @@
 from typing import Optional
 
-from flask_login import LoginManager
-
 from webserver.database.database import Database
 
 

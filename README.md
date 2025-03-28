@@ -38,7 +38,7 @@ Die wichtigsten Ordner und Dateien im Projekt sind:
 ## Installation und Setup
 
 ### Voraussetzungen
-
+- **Python ~= 3.13 **
 - **Docker / Docker Desktop**
 
 ### Instalations Anleitung
@@ -51,6 +51,10 @@ Die wichtigsten Ordner und Dateien im Projekt sind:
    - PostgreSQL (ab Version 14) Docker-Image herunterladen 
    ``docker pull postgres:14.*`` 
    - ``docker-compose.yaml`` ausführen
+3. **Requirements**
+    ```bash
+   pip install -r requirements.txt
+4. ****
 
 ### Nutzung der Anwendung 
 - **Dashboard:**
@@ -60,3 +64,5 @@ Benutzer-Authentifizierung:
 Die Anwendung unterstützt Registrierung, Login und Logout.
 - **Posts**
 Erstelle neue Beiträge, sieh dir deine eigenen Beiträge an und erkunde alle veröffentlichten Beiträge über die entsprechenden Routen.
+
+
