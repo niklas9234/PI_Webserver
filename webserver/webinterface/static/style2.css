@@ -1,0 +1,137 @@
+/* Schriftart (optional): */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; /* falls gewünscht */
+}
+
+body {
+  /* Vollbild-Hintergrund, zentrierter Inhalt */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  background: url(photo-1530631383307-4a02169e6133.jpg);
+  background-size: cover;
+  background-position:center;
+}
+
+/* Container, der das Login-Formular umschließt */
+.wrapper {
+  background: rgba(255, 255, 255, 0.062); /* halbtransparentes Weiß */
+  backdrop-filter: blur(10px);          /* Unschärfe-Effekt (bei Browsern, die es unterstützen) */
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.253);
+  width: 350px;
+  padding: 40px 30px;
+  color: #fff;
+  text-align: center;
+}
+
+/* Überschrift für das Login */
+.wrapper h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Input-Container für Username/Password */
+.input-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Die eigentlichen Input-Felder */
+.input-box input {
+  width: 100%;
+  padding: 12px 45px 12px 20px; /* Platz für Icon links */
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1em;
+}
+
+/* Icons (Boxicons) links in den Input-Feldern positionieren */
+.input-box i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.input-box input:not(:placeholder-shown) {
+  color: #000;
+}
+
+/* Link für "Forgot password?" */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.remember-forgot label {
+  display: flex;
+  align-items: center;
+}
+
+.remember-forgot input {
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+}
+
+.remember-forgot a {
+  color: #96b0f8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Login-Button */
+.btn {
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 25px;
+  background: #fff;
+  color: #074595;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+.btn:hover {
+  background: #eeeeee96;
+}
+
+/* Registrierungshinweis */
+.remember-link {
+  margin-top: 20px;
+}
+.remember-link p {
+  font-size: 0.9em;
+  color: #ffffff;
+}
+.remember-link a {
+  color: #96b0f8;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.remember-link a:hover {
+  text-decoration: underline;
+}

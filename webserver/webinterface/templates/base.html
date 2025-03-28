@@ -1,24 +1,39 @@
-<!doctype html>
-<title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<nav>
-  <h1>Flaskr</h1>
-  <ul>
-    {% if g.user %}
-      <li><span>{{ g.user['username'] }}</span>
-      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
-    {% else %}
-      <li><a href="{{ url_for('auth.register') }}">Register</a>
-      <li><a href="{{ url_for('auth.login') }}">Log In</a>
-    {% endif %}
-  </ul>
-</nav>
-<section class="content">
-  <header>
-    {% block header %}{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}Webserver{% endblock %}</title>
+  <link rel="stylesheet" href="static/base.css">
+</head>
+<body>
+
+  <!-- Navigation / Header -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <h1>Webserver</h1>
+    </div>
+    <nav class="navbar-nav">
+      <a href="{{ url_for('auth.dashboard') }}">Dashboard</a>
+      <a href="{{ url_for('blog.explore') }}">Explore</a>
+      <a href="{{ url_for('blog.my_posts') }}">My Posts</a>
+      <a href="{{ url_for('blog.create') }}">Create</a>
+    </nav>
+    <div class="navbar-right">
+      <!-- Wenn Admin, dann Accounts anzeigen -->
+      {% if session.get('role') == 'admin' %}
+      <a href="{{ url_for('accounts') }}">Accounts</a>
+      {% endif %}
+
+      <a href="{{ url_for('auth.logout') }}">Logout</a>
+    </div>
   </header>
-  {% for message in get_flashed_messages() %}
-    <div class="flash">{{ message }}</div>
-  {% endfor %}
-  {% block content %}{% endblock %}
-</section>
+
+  <!-- Hauptinhalt -->
+  <main>
+    {% block content %}
+    <!-- Unterseiten fügen hier ihren Inhalt ein -->
+    {% endblock %}
+  </main>
+
+</body>
+</html>

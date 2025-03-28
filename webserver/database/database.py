@@ -1,15 +1,17 @@
+import contextlib
 import logging
 
+from decorator import contextmanager
 from sqlalchemy import create_engine, inspect
-from sqlalchemy.orm import sessionmaker, scoped_session
+from sqlalchemy.orm import sessionmaker, scoped_session, Session
 from sqlalchemy_utils import database_exists, create_database
 
-from webserver.database.base import  Base
+from webserver.database.base import Base
 
 
 class Database:
 
-    def __init__(self, db_url:str):
+    def __init__(self, db_url: str):
         self.logger = logging.getLogger("webserver")
         self.logger.info("--- Init Database ---")
         try:
@@ -21,21 +23,22 @@ class Database:
 
             Base.metadata.create_all(self.engine)
 
-            self.SessionFactory = sessionmaker(bind=self.engine)
-            self.Session = scoped_session(self.SessionFactory)
+            self._session_maker: sessionmaker = sessionmaker(self.engine)
 
         except Exception:
             self.logger.exception(f'Database Connection error')
             raise Exception
 
+    @contextlib.contextmanager
     def get_db_session(self):
-        db_session = self.Session()
+        session: Session = self._session_maker(expire_on_commit=False)
         try:
-            yield db_session
+            yield session
         finally:
-            db_session.close()
-
+            session.commit()
+            session.close()
 
     def connection_status(self):
         inspection = inspect(self.engine)
         return f'Connection on "{self.engine.url}" with Tables {inspection.get_table_names()}'
+

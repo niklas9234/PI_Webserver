@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Webserver{% endblock %}
+{% block content %}
+
+  <div class="posts-container">
+
+    <div class="posts-section">
+      <h2>My Posts</h2>
+      {% for post in my_posts_ser %}
+       <div class="post-card">
+         <div class="post-title">{{ post.title }}</div>
+         <div class="post-date">created on: {{ post.created_on }}</div>
+         <div class="post-body">{{ post.body }}</div>
+       </div>
+      {% endfor %}
+    </div>
+
+
+    <div class="posts-section">
+      <h2>My Posts</h2>
+      {% for post in other_posts_ser %}
+      <div class="post-card">
+        <div class="post-title">{{ post.title }}</div>
+        <div class="post-date">created on: {{ post.created_on }}</div>
+        <div class="post-body">{{ post.body }}</div>
+        <div class="post-author">Author: {{ post.author }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+
+{% endblock %}

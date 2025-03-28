@@ -1,36 +1,44 @@
 import logging
+from typing import Optional
+
 
 from flask import Flask, g
+from flask_login import LoginManager
 
-from webserver.webinterface.routes.example_blueprint import example_blueprint
-
+from webserver.database.database import Database
+from webserver.database.models.user import User
+from webserver.webinterface.auth import auth_bp
+from webserver.webinterface.blog import blog_bp
+from webserver.webinterface.config import Config
+from webserver.webinterface.persistancelayer import PersistenceLayer
 
 
 class Webinterface:
-    def __init__(self, db):
+    _db: Optional[Database] = None
+    def __init__(self):
         self.app = Flask(__name__, template_folder="templates")
-        self.app.config.from_mapping(SECRET_KEY='dev')
+        self.app.config.from_object(Config)
         self._logger = logging.getLogger("webserver")
-        self.setup_session_handling()
+
         self.register_blueprints()
-        self._db = db
+        self.create_user_loader()
+
+        @self.app.route('/test/')
+        def test_page():
+            return '<h1>Testing the Flask Application Factory Pattern</h1>'
 
 
-    def setup_session_handling(self):
-        @self.app.before_request
-        def start_session():
-            g.db_session = next(self._db.get_db_session())
-
-        @self.app.teardown_request
-        def close_session(exception=None):
-            db_session = getattr(g, "db_session", None)
-            if db_session:
-                db_session.commit()
-                db_session.close()
-
+    def create_user_loader(self):
+        login = LoginManager(self.app)
+        login.login_view = 'login'
+        @login.user_loader
+        def load_user(_id):
+            with PersistenceLayer.db().get_db_session() as db_session:
+                return db_session.get(User, int(_id))
 
     def register_blueprints(self):
-        self.app.register_blueprint(example_blueprint)
+        self.app.register_blueprint(auth_bp)
+        self.app.register_blueprint(blog_bp)
 
 
     def run(self, host="0.0.0.0", port=5000, debug=True):

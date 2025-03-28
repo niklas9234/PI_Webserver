@@ -1,0 +1,190 @@
+/* Vollbild-Hintergrund mit Abdeckung */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: url(photo-1530631383307-4a02169e6133.jpg)no-repeat center center fixed;
+  background-size: cover;
+  background-position:center;
+  color: #fff;
+}
+/* Obere Navigationsleiste */
+.navbar {
+  position: fixed;      /* bleibt oben fixiert */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.15);;  /* halbtransparentes Schwarz */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 999;         /* über Content und Footer legen */
+}
+
+.navbar-left h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.navbar-nav a,
+.navbar-right a {
+  color: #666666;
+  text-decoration: none;
+  margin: 0 5px;
+  margin-right: 35px;
+}
+
+.navbar-nav a:hover,
+.navbar-right a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Container für alle Post-Bereiche */
+.posts-container {
+  display: flex;
+  flex-direction: column; /* Alle Sektionen untereinander */
+  gap: 0rem;             /* Abstand zwischen "Your Recent Posts" und "Other Posts" */
+  margin-top: 60px;
+}
+
+/* Jede Sektion mit eigenem Titel */
+.posts-section {
+  /* background: rgba(255, 255, 255, 0.1); leicht transparent */
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* Überschrift in den Sektionen */
+.posts-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Einzelne Post-Karte */
+.post-card {
+  background: rgba(255, 255, 255, 0.384);
+  border-radius: 8px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;  /* Abstand zwischen Post-Karten */
+  transition: background 0.3s;
+}
+
+.post-card:hover {
+  color: #111111;
+  background: rgba(255, 255, 255, 0.9); /* Hover-Effekt */
+}
+
+.post-card {
+  display: grid;
+  grid-template-areas:
+    "title date"
+    "body author";
+  grid-template-columns: 1fr auto;  /* erste Spalte flexibel, zweite automatisch */
+  grid-template-rows: auto auto;
+  gap: 0.5rem;  /* Abstand zwischen den Bereichen */
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.384);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.post-title {
+  grid-area: title;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.post-date {
+  grid-area: date;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.post-body {
+  grid-area: body;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.post-author {
+  grid-area: author;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+
+/* ---------------------------- */
+
+/* Container für das Formular – zentriert und mit ausreichend Platz */
+.form-container {
+  width: 80%;
+  max-width: 800px;
+  margin: 2rem auto;           /* Zentriert horizontal, Abstand oben/unten */
+  margin-top: 100px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.384);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #000;                 /* Textfarbe für bessere Lesbarkeit */
+}
+
+/* Wrapper, um den Form-Container vertikal und horizontal zu zentrieren */
+.create-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px); /* Gesamthöhe des Viewports minus Navbar-Höhe */
+}
+
+/* Jede Form-Gruppe bekommt einen Abstand nach unten */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Labels blockweise anzeigen */
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+/* Einheitliches Styling für Text-Inputs und Textareas */
+.form-container input[type="text"],
+.form-container textarea {
+  width: 100%;             /* Volle Breite */
+  padding: 0.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Textarea (Content-Feld) größer machen – mindestens 200px hoch */
+.form-container textarea {
+  min-height: 150px;
+  white-space: pre-wrap;
+}
+
+/* Der Create-Button soll genauso breit sein wie die Eingabefelder */
+.form-container input[type="submit"],
+.form-container button {
+  width: 100%;             /* Volle Breite */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form-container input[type="submit"]:hover,
+.form-container button:hover {
+  background-color: #0056b3; /* Neue Hintergrundfarbe beim Hover */
+}
+
+
