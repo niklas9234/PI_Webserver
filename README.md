@@ -15,18 +15,6 @@ Ziel des Projekts ist es, eine webbasierte Anwendung zu realisieren, die:
 - Eine PostgreSQL-Datenbank zur persistenten Speicherung nutzt
 - Die Anwendung in einer containerisierten Umgebung (Docker) betreibt
 
-
-## Projektstruktur
-
-Die wichtigsten Ordner und Dateien im Projekt sind:
-
-- **webserver/**  
-  - **database/** – Enthält die Datenbankkonfiguration und Modelldefinitionen (z. B. `models/user.py`, `models/posting.py`).
-  - **webinterface/** – Beinhaltet die Routen, Templates und statischen Dateien für die Web-Oberfläche.
-  - **persistancelayer.py** – Bereitstellung der Sessions für Anfragen.
-- **docker-compose.yaml** – Konfiguriert die Container (Webserver, PostgreSQL).
-- **README.md** – Diese Dokumentation.
-
 ## Verwendete Technologien
 
 - **Entwickelt auf Windows**
@@ -38,7 +26,7 @@ Die wichtigsten Ordner und Dateien im Projekt sind:
 ## Installation und Setup
 
 ### Voraussetzungen
-- **Python ~= 3.13 **
+- **Entwickelt auf Python 3.13**
 - **Docker / Docker Desktop**
 
 ### Instalations Anleitung

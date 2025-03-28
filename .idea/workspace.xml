@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="95fd0231-bdb0-433c-9a13-a0cfc69eb34c" name="Changes" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="95fd0231-bdb0-433c-9a13-a0cfc69eb34c" name="Changes" comment="requirements">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/database/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/database/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/logging_config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/auth/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/auth/routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/persistancelayer.py" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/persistancelayer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webserver/webinterface/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/webserver/webinterface/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,11 +141,29 @@
       <option name="project" value="LOCAL" />
       <updated>1743176646003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="cleanup">
+      <option name="closed" value="true" />
+      <created>1743178303147</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743178303147</updated>
+    </task>
+    <task id="LOCAL-00004" summary="requirements">
+      <option name="closed" value="true" />
+      <created>1743178540987</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1743178540987</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="cleanup" />
+    <MESSAGE value="requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirements" />
   </component>
 </project>
