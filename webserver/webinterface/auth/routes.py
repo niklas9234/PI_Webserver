@@ -1,8 +1,7 @@
-from datetime import timedelta, datetime
-from functools import wraps
+from datetime import datetime
 
-from flask import render_template, flash, redirect, session, request, url_for
-from flask_login import current_user, login_user, logout_user
+from flask import render_template, flash, redirect, url_for
+from flask_login import current_user, login_user, logout_user, login_required
 from sqlalchemy import select
 
 from webserver.database.models.posting import Posting
@@ -13,6 +12,7 @@ from webserver.webinterface.persistancelayer import PersistenceLayer
 
 
 @auth_bp.route('/dashboard', methods=['GET', 'POST'])
+@login_required
 def dashboard():
     with PersistenceLayer.db().get_db_session() as db_session:
         my_posts = (

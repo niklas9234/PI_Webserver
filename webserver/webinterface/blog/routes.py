@@ -1,5 +1,5 @@
 from flask import render_template, url_for
-from flask_login import current_user
+from flask_login import current_user, login_required
 from werkzeug.utils import redirect
 
 from webserver.database.models.posting import Posting
@@ -10,6 +10,7 @@ from webserver.webinterface.persistancelayer import PersistenceLayer
 
 
 @blog_bp.route('/my_posts', methods=['GET', 'POST'])
+@login_required
 def my_posts():
     with PersistenceLayer.db().get_db_session() as db_session:
         my_posts = (
@@ -24,6 +25,7 @@ def my_posts():
 
 
 @blog_bp.route('/explore', methods=['GET', 'POST'])
+@login_required
 def explore():
     with PersistenceLayer.db().get_db_session() as db_session:
         posts = (
@@ -36,6 +38,7 @@ def explore():
     return render_template('blog/explore.html', title='Explore', posts=posts_ser )
 
 @blog_bp.route('/create', methods=['GET', 'POST'])
+@login_required
 def create():
     form = CreatePostForm()
     if form.validate_on_submit():

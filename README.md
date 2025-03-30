@@ -43,6 +43,10 @@ Ziel des Projekts ist es, eine webbasierte Anwendung zu realisieren, die:
     ```bash
    python -m venv venv
    pip install -r requirements.txt
+4. Falls Flask-Debug mode gewünscht ist
+   ```bash
+   in webserver/webinterface/webinterface.py 
+   run([...] debug=False) in debug=True ändern  
 
 ### Nutzung der Anwendung 
 - **Dashboard:**

@@ -1,15 +1,13 @@
-/* Schriftart (optional): */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; /* falls gewünscht */
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  /* Vollbild-Hintergrund, zentrierter Inhalt */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,10 +18,9 @@ body {
   background-position:center;
 }
 
-/* Container, der das Login-Formular umschließt */
 .wrapper {
-  background: rgba(255, 255, 255, 0.062); /* halbtransparentes Weiß */
-  backdrop-filter: blur(10px);          /* Unschärfe-Effekt (bei Browsern, die es unterstützen) */
+  background: rgba(255, 255, 255, 0.062);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.253);
   width: 350px;
@@ -32,22 +29,19 @@ body {
   text-align: center;
 }
 
-/* Überschrift für das Login */
 .wrapper h1 {
   font-size: 2em;
   margin-bottom: 20px;
 }
 
-/* Input-Container für Username/Password */
 .input-box {
   position: relative;
   margin-bottom: 20px;
 }
 
-/* Die eigentlichen Input-Felder */
 .input-box input {
   width: 100%;
-  padding: 12px 45px 12px 20px; /* Platz für Icon links */
+  padding: 12px 45px 12px 20px;
   border: none;
   border-radius: 25px;
   outline: none;
@@ -56,7 +50,6 @@ body {
   font-size: 1em;
 }
 
-/* Icons (Boxicons) links in den Input-Feldern positionieren */
 .input-box i {
   position: absolute;
   top: 50%;
@@ -70,7 +63,6 @@ body {
   color: #000;
 }
 
-/* Link für "Forgot password?" */
 .remember-forgot {
   display: flex;
   justify-content: space-between;
@@ -101,7 +93,6 @@ body {
   text-decoration: underline;
 }
 
-/* Login-Button */
 .btn {
   width: 100%;
   padding: 12px 0;
@@ -118,7 +109,6 @@ body {
   background: #eeeeee96;
 }
 
-/* Registrierungshinweis */
 .remember-link {
   margin-top: 20px;
 }

@@ -2,7 +2,7 @@ import logging
 from typing import Optional
 
 
-from flask import Flask, g
+from flask import Flask
 from flask_login import LoginManager
 
 from webserver.database.database import Database
@@ -36,11 +36,12 @@ class Webinterface:
             with PersistenceLayer.db().get_db_session() as db_session:
                 return db_session.get(User, int(_id))
 
+
     def register_blueprints(self):
         self.app.register_blueprint(auth_bp)
         self.app.register_blueprint(blog_bp)
 
 
-    def run(self, host="0.0.0.0", port=5000, debug=True):
+    def run(self, host="0.0.0.0", port=5000, debug=False):
         self.app.run(host=host, port=port, debug=debug)
 
