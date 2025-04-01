@@ -57,4 +57,9 @@ Die Anwendung unterstützt Registrierung, Login und Logout.
 - **Posts**
 Erstelle neue Beiträge, sieh dir deine eigenen Beiträge an und erkunde alle veröffentlichten Beiträge über die entsprechenden Routen.
 
+### Struktur
 
+- Anwendung läuft lokal und ist im Netzwerk zu erreichen unter 
+   ```html
+   http://127.0.0.1:5000
+-  Datenbank läuft in einem Docker-Container
